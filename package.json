@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --env.dev",
     "build": "webpack",
-    "test": "ava test/ --verbose"
+    "test": "ava test/ --verbose",
+    "watch": "ava test/ --verbose --watch"
   },
   "author": "Jeane",
   "license": "ISC",
