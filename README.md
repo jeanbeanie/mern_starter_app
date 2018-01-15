@@ -7,7 +7,9 @@ Webpack, Babel, ESLint, and StyleLint are set up for development. Ava is include
 #### Just add water
  Edit config file *Secrets.js* with appropiate port number, etc., then run :
 > ```npm install --save```
+
 > ```npm run build``` 
+
 > ```node app.js```
 
 #### Available Commands
