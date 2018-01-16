@@ -1,6 +1,6 @@
 # MERN Starter App
 
-Seed starter app using Node (Express) and React.  Written by Jeane <http://www.twitter.com/onlyjeanbean>
+Seed starter app using Node (Express), MongoDB and React.  Written by Jeane <http://www.twitter.com/onlyjeanbean>
 
 Webpack, Babel, ESLint, and StyleLint are set up for development. Ava is included for test running.
 
@@ -19,4 +19,3 @@ Webpack, Babel, ESLint, and StyleLint are set up for development. Ava is include
 
 #### TODO :
 * make Secrets.js.example to serve as example config file template!!!
-* Hook up MongoDB
