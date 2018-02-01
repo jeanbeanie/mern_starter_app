@@ -8,6 +8,10 @@ module.exports = options => {
       filename: 'bundle.js',
     },
 
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
+
 		module: {
     	rules: [
 				{
@@ -15,7 +19,7 @@ module.exports = options => {
         	loader : 'file-loader'
         },
         {
-          test: /.js$/,
+          test: /.jsx?$/,
           exclude: /node_modules/,
           use: [
             {
