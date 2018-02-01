@@ -1,13 +1,16 @@
-// indexjs
-import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'; 
-import FontAwesome from 'font-awesome/css/font-awesome.css';
+// index.js
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom';
+
+import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'; 
+import FontAwesome from 'font-awesome/css/font-awesome.css';
+
+import Layout from './components/layout';
+import HomeContainer from './components/home';
 
 class App extends Component {
   constructor(props){
@@ -17,15 +20,18 @@ class App extends Component {
   }
 
   render(){
+    const routes = <Route path="/" component={HomeContainer}/>;
+
     return(
       <Router>
-        <div>
-          <h1>Hi World</h1>
-        </div>
+        <Layout>
+          {routes}
+        </Layout>
       </Router>
     );
   }
 }
+
 
 const root = document.querySelector('#app');
 ReactDOM.render(<App />, root);
