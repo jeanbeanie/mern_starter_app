@@ -1,0 +1,16 @@
+a , body {
+  color:white !important;
+}
+
+.jumbotron {
+  border-radius: 10px 0px 10px 10px !important;
+}
+.jumbotron , .nav-tabs > li {
+  background-color: lightcoral !important;
+}
+.nav-tabs > li {
+  float: right !important;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: lightcoral !important;
+}
