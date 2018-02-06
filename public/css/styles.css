@@ -1,16 +1,19 @@
-a , body {
-  color:white !important;
+a, a:hover, a:focus, body {
+  color:white;
+}
+
+.nav-link {
+  font-size: larger;
+}
+
+#layout-container {
+  margin-top: 2rem;
+}
+
+.jumbotron, .nav-item {
+  background-color: darksalmon;
 }
 
 .jumbotron {
-  border-radius: 10px 0px 10px 10px !important;
-}
-.jumbotron , .nav-tabs > li {
-  background-color: lightcoral !important;
-}
-.nav-tabs > li {
-  float: right !important;
-}
-.nav > li > a:focus, .nav > li > a:hover {
-  background-color: lightcoral !important;
+  border-radius: 10px 0px 10px 10px;
 }
