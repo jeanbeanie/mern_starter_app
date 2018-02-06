@@ -1,14 +1,25 @@
-import React from 'react';
-import {
-  Link
-} from 'react-router-dom';
+// ./src/components/Layout.jsx
 
-export default class Layout extends React.Component {
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+class Layout extends React.Component {
   render() {
     return (
-      <div className="container">
-        <ul className="nav nav-tabs">
-          <li role="presentation"><Link to="/">HOME</Link></li>
+      <div className="container" id="layout-container">
+
+        <ul className="nav justify-content-end">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">HOME</Link>
+          </li>
+
+          {/* Put another link like this :
+
+          <li className="nav-item">
+            <Link to="/blah" className="nav-link">BLAH</Link>
+          </li>
+
+          */}
         </ul>
 
         <div className="jumbotron">
@@ -18,3 +29,5 @@ export default class Layout extends React.Component {
     );
   }
 }
+
+export default Layout;

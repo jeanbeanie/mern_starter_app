@@ -1,6 +1,8 @@
+// ./src/components/HomeContainer.jsx
+
 import React from 'react';
 
-export default class HomeContainer extends React.Component {
+class HomeContainer extends React.Component {
   render() {
     return (
       <div>
@@ -9,3 +11,5 @@ export default class HomeContainer extends React.Component {
     );
   }
 }
+
+export default HomeContainer;
