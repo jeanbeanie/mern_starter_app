@@ -3,10 +3,8 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
+import routes from './routes';
 import Layout from './Layout';
-import HomeContainer from './HomeContainer';
-
-import NotFound from './NotFound';
 
 class App extends React.Component {
   constructor(props){
@@ -17,9 +15,18 @@ class App extends React.Component {
   render(){
     return(
       <Layout>
+        <h1></h1>
         <Switch>
-          <Route exact path="/" component={HomeContainer} />
-          <Route component={NotFound}/>
+          {
+            routes.map((route, i) => {
+              const routeProps = { ...route, component: undefined };
+              return (
+                <Route key={i} {...routeProps} render={() =>(
+                  <route.component {...this.props}/>
+                )}/>
+              );
+            })                     
+          }
         </Switch>
       </Layout>
     );

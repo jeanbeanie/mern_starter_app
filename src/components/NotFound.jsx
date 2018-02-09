@@ -1,10 +1,10 @@
 import React from 'react';
 import Status from './Status';
 
-const NotFound = () => (
+const NotFound = (props) => (
   <Status code={404}>
     <div>
-      <h1>Oh no, it&#39;s a 404!</h1>
+      <h1>{props.metaTitle}</h1>
     </div>
   </Status>
 );
