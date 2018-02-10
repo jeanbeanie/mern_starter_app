@@ -7,7 +7,6 @@ const getSomeData = () => {
   let data = 
     {
       loadedData: 'something from db',
-      metaTitle: 'Home Example Title',
       otherProps: 'something else',
     };
   return data;
