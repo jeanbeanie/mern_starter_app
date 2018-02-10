@@ -1,19 +1,29 @@
+html, body{
+  background-color:rosybrown;
+}
 a, a:hover, a:focus, body {
-  color:white;
+  color:dimgrey;
+}
+
+h1 {
+  text-align: center;
 }
 
 .nav-link {
   font-size: larger;
+  font-weight: bolder;
+  color: floralwhite;
+}
+
+.nav-link:focus, .nav-link:hover{
+  color: antiquewhite;
 }
 
 #layout-container {
   margin-top: 2rem;
 }
 
-.jumbotron, .nav-item {
-  background-color: darksalmon;
-}
-
 .jumbotron {
+  background-color: white;
   border-radius: 10px 0px 10px 10px;
 }
