@@ -1,7 +1,7 @@
 // ./src/components/routes.js
 
-import HomeContainer from './HomeContainer';
-import NotFound from './NotFound';
+import HomeContainer from './components/HomeContainer';
+import NotFound from './components/NotFound';
 
 const getSomeData = () => {
   let data = 
