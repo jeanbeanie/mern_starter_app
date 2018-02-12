@@ -3,7 +3,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import routes from './routes';
+import routes from '../routes';
 import Layout from './Layout';
 
 class App extends React.Component {
@@ -15,7 +15,6 @@ class App extends React.Component {
   render(){
     return(
       <Layout>
-        <h1></h1>
         <Switch>
           {
             routes.map((route, i) => {

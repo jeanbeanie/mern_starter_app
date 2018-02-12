@@ -8,7 +8,7 @@ const Html = (props) => {
   const dataJSON = JSON.stringify(data);
 
   return (
-    <html>
+    <html className="no-js" lang="">
       <head>
         <meta charSet="utf-8"/>
         <meta name="description" content={data.metaDescription} />
@@ -26,7 +26,8 @@ const Html = (props) => {
             {props.children}
         </div>
         <script id="initial-data" type="text/plain" data-json={dataJSON}></script>
-        <script src="bundle.js"></script>
+
+        <script src="http://localhost:3001/client.js"></script>
         
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossOrigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossOrigin="anonymous"></script>  
