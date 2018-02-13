@@ -1,6 +1,7 @@
 // ./src/components/Layout.jsx
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 class Layout extends React.Component {
@@ -19,5 +20,8 @@ class Layout extends React.Component {
     );
   }
 }
+Layout.propTypes = { 
+  children: PropTypes.object.isRequired,
+};
 
 export default Layout;
