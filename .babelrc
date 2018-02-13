@@ -2,7 +2,8 @@
   "presets": [
     ["env", {"modules": false}],
     "stage-1",
-    "react"
+    "react",
+    "flow"
   ],
   "plugins": [
     "transform-runtime"

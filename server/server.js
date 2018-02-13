@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
 
   if (context.url){
     // context.status was added if our custom Redirect or Status route component renders
-    redirect(context.status, context.url);
+    //redirect(context.status, context.url);
 
   } else {
     Promise.all(promises).then( data => {

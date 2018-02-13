@@ -1,4 +1,5 @@
 // ./src/
+// @flow
 
 import React from 'react';
 import HelmetContainer from './HelmetContainer';
@@ -10,7 +11,6 @@ import Layout from './Layout';
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = {};
   }
 
   renderRoute(){
