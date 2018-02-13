@@ -19,7 +19,7 @@ import routes from '../src/routes';
 app.get('*', (req, res) => {
   const promises = [];
   const context = {};
-
+  
   // use 'some' method to imitate <Switch> behavior of selecting only
   // the first route to match
   routes.some(route => {
@@ -37,21 +37,14 @@ app.get('*', (req, res) => {
   } else {
     Promise.all(promises).then( data => {
       // route specific initial data is either returned from promise or empty
+      // TODO throw err on empty data!!
       const routeData = data[0] || [];
-
-      // general app specific initial data, overwritten by routeData where possible
-      const initialData = {
-        metaTitle: routeData.metaTitle || 'Mern Starter App',
-        metaKeywords: routeData.metaKeywords || 'MERN, Mongo, Express, React, Node',
-        metaDescription: routeData.metaDescription || 'A starter using the Mern stack.',
-        metaAuthor: 'Jean',
-      };
 
       // markup to be rendered by server with StaticRouter
       const markup =  ReactDOMServer.renderToNodeStream(
         <Router location={req.url} context={context}>
-          <Html initialData={initialData}>
-            <App {...initialData}  />
+          <Html initialData={routeData}>
+            <App {...routeData}  />
           </Html>
         </Router>
       );
