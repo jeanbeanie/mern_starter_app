@@ -3,8 +3,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 const HomeContainer = (props) => (
-  <div>
+  <div className="text-center">
     <h1>{props.metaTitle}</h1>
+    <img id="homeImage" src='img/sprout.png' alt='MERN starter seed app'/>
   </div>
 );
 

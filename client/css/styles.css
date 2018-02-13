@@ -1,23 +1,30 @@
 html, body{
-  background-color:lightgrey;
+  background-color:#eee;
 }
 
-body {
-  color:lightcoral;
+body{
+  font-family: inherit;
 }
 
 h1 {
   text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+#homeImage {
+  width: 18rem;
+  padding: 3rem;
 }
 
 .nav-link {
   font-size: larger;
   font-weight: bolder;
-  color: floralwhite;
+  color: darkgrey;
 }
 
-.nav-link:focus, .nav-link:hover{
-  color: antiquewhite;
+.nav-link:hover{
+  color: dimgrey;
 }
 
 #layout-container {
@@ -25,6 +32,8 @@ h1 {
 }
 
 .jumbotron {
+  color:dimgrey;
   background-color: white;
-  border-radius: 10px 0px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
 }
