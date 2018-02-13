@@ -5,4 +5,4 @@
 *.ttf
 package-lock.json
 node_modules/
-public/bundle.js
+.build/
