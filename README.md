@@ -1,19 +1,13 @@
 # MERN Starter App
 
-Seed starter app using Node (Express), MongoDB and React.  Written by Jeane <http://www.twitter.com/onlyjeanbean>
+Seed starter app using Node (Express), MongoDB and React (rendered from client and server) to be used for future projects and whatnot...written by Jeane <http://www.twitter.com/onlyjeanbean>
 
-Webpack, Babel, ESLint, and StyleLint are set up for development. Ava is included for test running. SSR enabled
+Webpack/Babel (hot relaoding) is set up for development. Ava is included for test running.
 
 #### Just add water
- Edit config file *Secrets.js* with appropiate port number, etc., then run :
 > ```npm install --save```
 
 > ```npm start``` 
 
-#### Available Commands
-* npm run build 
-* npm run watch 
-* npm test
-
 #### TODO :
-* make Secrets.js.example to serve as example config file template!!!
+* make config.secrets.js to serve as example config file template!!!
