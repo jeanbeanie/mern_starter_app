@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server --env.dev",
     "build": "webpack",
-    "start": "webpack && babel-node server.js",
     "start:server": "rm -rf ./build && webpack --config webpack.config.server.js",
     "start:client": "webpack-dev-server --config webpack.config.client.js",
-    "start:start": "rm -rf ./.build && npm-run-all --parallel start:server start:client",
+    "start": "rm -rf ./.build && npm-run-all --parallel start:server start:client",
     "test": "ava test/ --verbose",
     "watch": "ava test/ --verbose --watch"
   },
