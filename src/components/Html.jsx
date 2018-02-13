@@ -1,5 +1,4 @@
 // ./src/components/Html.jsx
-
 import React from 'react';
 
 const Html = (props) => {
@@ -7,23 +6,18 @@ const Html = (props) => {
   // <link rel="stylesheet" href="css/styles.css" />
   const data = props.initialData;
   const dataJSON = JSON.stringify(data);
-
+  const helmet = props.helmet;
+  console.log('props helmet', props.helmet);
   return (
     <html className="no-js" lang="">
       <head>
-        <meta charSet="utf-8"/>
-        <meta name="description" content={data.metaDescription} />
-        <meta name="keywords" content={data.metaKeywords} />
-        <meta name="author" content={data.metaAuthor} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous"/>
-
-        <title>{data.metaTitle}</title>
+        {helmet.title.toComponent()}
+        {helmet.meta.toComponent()}
+        {helmet.link.toComponent()}
       </head>
-
       <body>
         <div id="app">
-            {props.children}
+          {props.children}
         </div>
         <script id="initial-data" type="text/plain" data-json={dataJSON}></script>
 

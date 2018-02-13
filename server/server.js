@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import {Helmet} from 'react-helmet';
 import express from 'express';
 
 import Html from '../src/components/Html';
@@ -40,10 +41,16 @@ app.get('*', (req, res) => {
       // TODO throw err on empty data!!
       const routeData = data[0] || [];
 
+      //get the head data for use in your prerender.
+      //Because this component keeps track of mounted instances, 
+      //you have to make sure to call renderStatic on server, 
+      //or you'll get a memory leak.
+      const helmet = Helmet.renderStatic();
+
       // markup to be rendered by server with StaticRouter
       const markup =  ReactDOMServer.renderToNodeStream(
         <Router location={req.url} context={context}>
-          <Html initialData={routeData}>
+          <Html helmet={helmet} initialData={routeData}>
             <App {...routeData}  />
           </Html>
         </Router>
