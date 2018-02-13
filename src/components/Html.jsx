@@ -4,6 +4,7 @@ import React from 'react';
 
 const Html = (props) => {
   // pull data from props for easier referencing
+  // <link rel="stylesheet" href="css/styles.css" />
   const data = props.initialData;
   const dataJSON = JSON.stringify(data);
 
@@ -16,7 +17,6 @@ const Html = (props) => {
         <meta name="author" content={data.metaAuthor} />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous"/>
-        <link rel="stylesheet" href="css/styles.css" />
 
         <title>{data.metaTitle}</title>
       </head>

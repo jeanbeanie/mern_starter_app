@@ -15,15 +15,21 @@ module.exports = {
   },
 
   module: {
-    rules: [{
-      test: /\.jsx?$/,
-      use: 'babel-loader',
-      include: [
-        path.join(__dirname, 'client'),
-        path.join(__dirname, 'common'),
-        path.join(__dirname, 'src')
-      ]
-    }]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: 'babel-loader',
+        include: [
+          path.join(__dirname, 'client'),
+          path.join(__dirname, 'common'),
+          path.join(__dirname, 'src')
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+    ]
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
