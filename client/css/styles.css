@@ -1,8 +1,9 @@
 html, body{
-  background-color:rosybrown;
+  background-color:lightgrey;
 }
-a, a:hover, a:focus, body {
-  color:lightgrey;
+
+body {
+  color:lightcoral;
 }
 
 h1 {
