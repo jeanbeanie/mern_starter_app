@@ -20,8 +20,9 @@ class Layout extends React.Component {
     );
   }
 }
+
 Layout.propTypes = { 
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
