@@ -10,8 +10,8 @@
     "start:server": "rm -rf ./build && webpack --config webpack.config.server.js",
     "start:client": "webpack-dev-server --config webpack.config.client.js",
     "start": "rm -rf ./.build && npm-run-all --parallel start:server start:client",
-    "test": "BABEL_ENV=test ava test/ --verbose",
-    "watch": "BABEL_ENV=test ava test/ --verbose --watch"
+    "test": "BABEL_ENV=test ava --verbose",
+    "watch": "BABEL_ENV=test ava --verbose --watch"
   },
   "author": "Jeane",
   "license": "ISC",
@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.26.0",
+    "browser-env": "^3.2.5",
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -65,8 +66,12 @@
     "sass-loader": "^6.0.6"
   },
   "ava": {
+    "files": [
+      "test/test.js"
+    ],
     "require": [
-      "babel-register"
+      "babel-register",
+      "./test/helpers/setup-browser-env.js"
     ],
     "babel": "inherit"
   }
