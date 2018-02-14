@@ -1,36 +1,19 @@
 import test from 'ava';
-import React from 'react';
 import Enzyme from 'enzyme';
-import {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 // provides Enzyme compatibility with React 16
 Enzyme.configure({ adapter: new Adapter() });
 
+// testing browser env
+test('Ava can insert to DOM', t => {
+  const div = document.createElement('div');
+  document.body.appendChild(div);
 
-/* EXAMPLE TESTS (ASYNC AND SYNC) */
-
-test('Sync test example', t => {
-    t.pass();
+  t.is(document.querySelector('div'), div);
 });
 
-test('Async test ezample', async t => {
-    const bar = Promise.resolve('bar');
-
-      t.is(await bar, 'bar');
-});
-
-
-/* REACT COMPONENT TESTS */
-
-// LAYOUT
-import Layout from '../src/components/Layout';
-
-test('Layout component renders children when passed in', t => {
-  const wrapper = shallow(
-      <Layout>
-        <div className="foo"/>
-      </Layout>
-  );
-  t.true(wrapper.contains(<div className="foo"/>));
-});
+// load other tests
+require('./examples');
+require('./app');
+require('./layout');
