@@ -1,4 +1,4 @@
-// ./test/app.js
+// /test/app.js
 
 import test from 'ava';
 import React from 'react';

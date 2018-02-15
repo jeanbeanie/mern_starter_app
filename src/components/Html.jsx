@@ -1,4 +1,5 @@
-// ./src/components/Html.jsx
+// /src/components/Html.jsx
+
 import React from 'react';
 
 const Html = (props) => {

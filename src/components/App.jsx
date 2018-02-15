@@ -1,4 +1,4 @@
-// ./src/
+// /src/components/App.jsx
 // @flow
 
 import React from 'react';

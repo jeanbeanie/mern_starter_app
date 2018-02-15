@@ -1,4 +1,4 @@
-// ./server/index.js
+// /server/index.js
 
 import http from 'http';
 import app from './server.js';

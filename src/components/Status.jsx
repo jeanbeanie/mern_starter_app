@@ -1,3 +1,5 @@
+// /src/components/Status.jsx
+
 import React from 'react';
 import {Route} from 'react-router-dom';
 

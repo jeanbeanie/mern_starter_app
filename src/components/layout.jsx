@@ -1,4 +1,4 @@
-// ./src/components/Layout.jsx
+// /src/components/Layout.jsx
 
 import React from 'react';
 import PropTypes from 'prop-types';
