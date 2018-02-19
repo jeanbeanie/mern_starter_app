@@ -3,18 +3,12 @@
 import HomeContainer from './components/HomeContainer';
 import NotFound from './components/NotFound';
 
+import { metaData } from './config';
+
 const loadInitialData = (props) => {
   //props should be an object
-  let defaultData = 
-    {
-      metaTitle: 'Mern Starter App',
-      metaKeywords: 'MERN, Mongo, Express, React, Node',
-      metaDescription: 'A starter using the Mern stack.',
-      metaAuthor: 'Jean',
-    };
-
   return {   
-    ...defaultData,
+    ...metaData,
     ...props,
   };
 };

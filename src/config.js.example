@@ -1,0 +1,12 @@
+// Example file for src/config.js
+// After editing, add to .gitignore 
+
+module.exports = {
+  // Default Metadata
+  metaData: {
+    metaTitle: 'MERN Vanilla Bean',
+    metaKeywords: 'MERN, Mongo, Express, React, Node',
+    metaDescription: 'Node Express React starter application.',
+    metaAuthor: 'Jean',
+  }
+};
