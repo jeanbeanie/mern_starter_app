@@ -1,9 +1,17 @@
 // /src/components/HelmetContainer.jsx
+// @flow
 
 import React from 'react';
 import {Helmet} from 'react-helmet';
 
-const HelmetContainer = (props) => {
+type Props = {
+  metaTitle: string,
+  metaDescription: string,
+  metaKeywords: string,
+  metaAuthor: string,
+}
+
+const HelmetContainer = (props: Props) => {
   return(
     <Helmet>
       <title>{props.metaTitle}</title>

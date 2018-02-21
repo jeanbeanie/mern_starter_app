@@ -8,8 +8,8 @@ import { Route, Switch} from 'react-router-dom';
 import routes from '../routes';
 import Layout from './Layout';
 
-class App extends React.Component {
-  constructor(props){
+class App extends React.Component<{}> {
+  constructor(props:{}){
     super(props);
   }
 
