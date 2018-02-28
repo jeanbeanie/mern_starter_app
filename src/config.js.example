@@ -1,5 +1,5 @@
 // Example file for src/config.js
-// After editing, add to .gitignore 
+// After creating and saving src/config.js, delete this example file!! 
 
 module.exports = {
   // Default Metadata
@@ -10,3 +10,4 @@ module.exports = {
     metaAuthor: 'Jean',
   }
 };
+

@@ -1,65 +1,65 @@
 // /server/server.js
+// @flow
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import express from 'express';
+import { StaticRouter as Router } from 'react-router';
+import { matchPath } from 'react-router-dom';
 
 import Html from '../src/components/Html';
 import App from '../src/components/App';
+import routes from '../src/routes';
+
 
 const app = express();
 
-//Serve static files from directory './client'
+// Serve static files from directory './client'
 app.use(express.static('client'));
-
-import {StaticRouter as Router} from 'react-router';
-import { matchPath } from 'react-router-dom';
-import routes from '../src/routes';
 
 app.get('*', (req, res) => {
   const promises = [];
   const context = {};
-  
+
   // use 'some' method to imitate <Switch> behavior of selecting only
   // the first route to match
-  routes.some(route => {
+  routes.some((route) => {
     const match = matchPath(req.url, route);
-    if(match){
+    if (match) {
       promises.push(route.loadInitialData(match));
     }
     return match;
   });
 
-  if (context.url){
+  if (context.url) {
     // context.status was added if our custom Redirect or Status route component renders
-    //redirect(context.status, context.url);
+    // redirect(context.status, context.url);
 
   } else {
-    Promise.all(promises).then( data => {
+    Promise.all(promises).then((data) => {
       // route specific initial data is either returned from promise or empty
       // TODO throw err on empty data!!
       const routeData = data[0] || [];
 
-      //get the head data for use in your prerender.
-      //Because this component keeps track of mounted instances, 
-      //you have to make sure to call renderStatic on server, 
-      //or you'll get a memory leak.
+      // get the head data for use in your prerender.
+      // Because this component keeps track of mounted instances,
+      // you have to make sure to call renderStatic on server,
+      // or you'll get a memory leak.
       const helmet = Helmet.renderStatic();
 
       // markup to be rendered by server with StaticRouter
-      const markup =  ReactDOMServer.renderToNodeStream(
+      const markup = ReactDOMServer.renderToNodeStream(
         <Router location={req.url} context={context}>
           <Html helmet={helmet} initialData={routeData}>
-            <App {...routeData}  />
+            <App {...routeData} />
           </Html>
-        </Router>
-      );
+        </Router>);
 
-      //render the application
+      // render the application
       markup.pipe(res);
     });
-  } 
+  }
 });
 
 export default app;

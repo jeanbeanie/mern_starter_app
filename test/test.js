@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 // testing mock browser env
-test('can insert to DOM', t => {
+test('can insert to DOM', (t) => {
   const div = document.createElement('div');
   document.body.appendChild(div);
 

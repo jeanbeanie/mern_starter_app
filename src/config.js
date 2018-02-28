@@ -8,5 +8,5 @@ module.exports = {
     metaKeywords: 'MERN, Mongo, Express, React, Node',
     metaDescription: 'Node Express React starter application.',
     metaAuthor: 'Jean',
-  }
+  },
 };
