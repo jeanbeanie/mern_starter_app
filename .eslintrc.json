@@ -4,7 +4,7 @@
         "node": true,
         "es6": true
     },
-    "extends": [ "airbnb", "plugin:flowtype/recommended", "plugin:react/recommended"],
+    "extends": [ "airbnb", "plugin:flowtype/recommended", "plugin:react/recommended", "plugin:ava/recommended"],
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -14,7 +14,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "babel", "react", "flowtype"
+        "babel", "react", "flowtype", "ava"
     ],
     "rules": {
         "no-console": [
