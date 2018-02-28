@@ -4,7 +4,8 @@
         "node": true,
         "es6": true
     },
-    "extends": ["eslint:recommended", "airbnb-flow", "plugin:react/recommended"],
+    "extends": [ "airbnb", "plugin:flowtype/recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -13,7 +14,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "babel", "react", "flowtype"
     ],
     "rules": {
         "no-console": [
