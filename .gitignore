@@ -3,7 +3,6 @@
 *.woff2
 *.svg
 *.ttf
-package-lock.json
 node_modules/
 .build/
 .DS_store
