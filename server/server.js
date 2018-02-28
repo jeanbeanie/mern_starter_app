@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
   routes.some((route) => {
     const match = matchPath(req.url, route);
     if (match) {
-      promises.push(route.loadInitialData(match));
+      promises.push(route.loadInitialData());
     }
     return match;
   });

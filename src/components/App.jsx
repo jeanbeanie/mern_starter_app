@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import routes from '../routes';
 import Layout from './Layout';
 
-class App extends React.Component {
+class App extends React.Component<{}> {
   renderRoute() {
     return (
       <Switch>
