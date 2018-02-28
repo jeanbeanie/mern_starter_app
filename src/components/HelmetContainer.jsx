@@ -1,5 +1,5 @@
-// /src/components/HelmetContainer.jsx
-// @flow
+/* src/components/HelmetContainer.jsx */
+/* @flow */
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet';

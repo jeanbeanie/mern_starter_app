@@ -1,5 +1,5 @@
-// /src/components/HomeContainer.jsx
-//  @flow
+/* src/components/HomeContainer.jsx */
+/* @flow */
 
 import React from 'react';
 

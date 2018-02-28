@@ -1,4 +1,5 @@
-// /server/index.js
+/* server/index.js */
+/* @flow */
 
 import http from 'http';
 import app from './server';

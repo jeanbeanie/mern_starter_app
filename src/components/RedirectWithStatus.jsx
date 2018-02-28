@@ -1,4 +1,5 @@
-// /src/components/RedirectWithStatus.jsx
+/* src/components/RedirectWithStatus.jsx */
+/* @flow */
 
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';

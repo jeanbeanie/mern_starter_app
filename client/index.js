@@ -1,4 +1,5 @@
-// ./client/index.js
+/* client/index.js */
+/* @flow */
 
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -1,4 +1,5 @@
-// /src/components/NotFound.jsx
+/* src/components/NotFound.jsx */
+/* @flow */
 
 import React from 'react';
 import Status from './Status';

@@ -1,4 +1,5 @@
-// /src/components/Html.jsx
+/* src/components/Html.jsx */
+/* @flow */
 
 import React from 'react';
 

@@ -1,5 +1,5 @@
-// ./src/components/routes.js
-// @flow
+/* src/components/routes.js */
+/* @flow */
 
 import HomeContainer from './components/HomeContainer';
 import NotFound from './components/NotFound';

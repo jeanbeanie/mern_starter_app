@@ -1,4 +1,5 @@
-// /test/test.js
+/* test/test.js */
+
 import test from 'ava';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

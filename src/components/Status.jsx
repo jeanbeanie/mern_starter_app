@@ -1,4 +1,5 @@
-// /src/components/Status.jsx
+/* src/components/Status.jsx */
+/* flow */
 
 import React from 'react';
 import { Route } from 'react-router-dom';

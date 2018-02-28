@@ -1,5 +1,5 @@
-// /server/server.js
-// @flow
+/* server/server.js */
+/* @flow */
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
