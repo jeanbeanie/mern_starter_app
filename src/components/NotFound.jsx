@@ -4,7 +4,11 @@
 import React from 'react';
 import Status from './Status';
 
-const NotFound = props => (
+type Props = {
+  metaTitle: string,
+};
+
+const NotFound = (props: Props) => (
   <Status code={404}>
     <div>
       <h1>{props.metaTitle}</h1>

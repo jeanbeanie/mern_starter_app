@@ -4,7 +4,13 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const RedirectWithStatus = ({ from, to, status }) => (
+type Props = {
+  from: string,
+  to: string,
+  status: {value: number},
+};
+
+const RedirectWithStatus = ({ from, to, status }: Props) => (
   <Route render={({ staticContext }) => {
     if (staticContext) {
       staticContext.status = status;

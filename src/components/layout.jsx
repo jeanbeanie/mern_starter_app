@@ -1,11 +1,15 @@
 /* src/components/Layout.jsx */
 /* @flow */
 
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Layout = props => (
+type Props = {
+  children: React.Node,
+};
+
+const Layout = (props: Props) => (
   <div className="container" id="layout-container">
 
     <nav className="navbar justify-content-end">
