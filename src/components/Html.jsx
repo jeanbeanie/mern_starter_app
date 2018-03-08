@@ -1,9 +1,25 @@
 /* src/components/Html.jsx */
 /* @flow */
 
-import React from 'react';
+import * as React from 'react';
 
-const Html = (props) => {
+type Props= {
+  children: React.Node,
+  initialData: {},
+  helmet: {
+    title: {
+      toComponent: () => React.Node,
+    },
+    meta: {
+      toComponent: () => React.Node,
+    },
+    link: {
+      toComponent: () => React.Node,
+    },
+  }
+};
+
+const Html = (props: Props) => {
   // pull data from props for easier referencing
   const data = props.initialData;
   const { helmet } = props;
