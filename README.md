@@ -13,7 +13,3 @@ Webpack/Babel (hot reloading) is set up for development. Ava is included for tes
 > ```npm test```
 
 > ```npm watch```
-
-#### TODO :
-* move default application data into some kind of config
-* make config.secrets.js to serve as example config file template!!!
