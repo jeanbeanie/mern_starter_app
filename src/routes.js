@@ -5,15 +5,15 @@ import HomeContainer from './components/HomeContainer';
 import NotFound from './components/NotFound';
 import { metaData } from './config';
 
-const loadInitialData = props =>
-  // props should be an object
+const loadInitialData = (props:? {}) =>
+  // overwrite default meta data with passed in props
   ({
     ...metaData,
     ...props,
   });
 
 // loadInitialData property is required and must return obj
-const routes = [
+const routes: Array<{loadInitialData: () => {}}> = [
   {
     path: '/',
     exact: true,
