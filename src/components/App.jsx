@@ -2,10 +2,10 @@
 /* @flow */
 
 import React from 'react';
-import HelmetContainer from './HelmetContainer';
 import { Route, Switch } from 'react-router-dom';
-
 import routes from '../routes';
+
+import HelmetContainer from './HelmetContainer';
 import Layout from './Layout';
 
 class App extends React.Component<{}> {
@@ -22,8 +22,11 @@ class App extends React.Component<{}> {
                 {...routeProps}
                 render={() => (
                   <div>
-                    <HelmetContainer {...route.loadInitialData()} />
-                    <route.component {...route.loadInitialData()} />
+                    <HelmetContainer {...this.props} />
+                    <route.component
+                      loadInitialData={route.loadInitialData}
+                      {...this.props}
+                    />
                   </div>
                 )}
               />
