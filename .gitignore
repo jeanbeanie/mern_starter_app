@@ -1,3 +1,6 @@
+client/client.js
+server/app.js
+src/config.js
 *.eot  
 *.woff
 *.woff2
