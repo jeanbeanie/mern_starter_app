@@ -1,6 +1,6 @@
 # MERN Starter App
 
-Seed starter app using Node (Express) and React (server side rendering) to be used for future projects and whatnot...written by Jeane <http://www.twitter.com/onlyjeanbean>
+Seed starter app using Node (Express) and React (server side rendering) to be used for future projects and whatnot
 
 Webpack/Babel (hot reloading) is set up for development. Ava is included for test running.
 
@@ -13,3 +13,5 @@ Webpack/Babel (hot reloading) is set up for development. Ava is included for tes
 > ```npm test```
 
 > ```npm watch```
+----------------------
+...written by me <http://www.twitter.com/onlyjeanbean>
