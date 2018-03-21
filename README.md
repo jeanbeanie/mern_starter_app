@@ -5,7 +5,7 @@ A seed starter app using Node (Express) and React (server side rendering) I crea
 Webpack/Babel (with hot reloading) is set up for development. Ava is included for test running.
 
 #### Create your config file (see src/config.example.js), then just add water
-> ```npm install``
+> ```npm install```
 
 > ```npm start``` 
 
