@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Starter app for projects using the MERN stack.",
   "main": "src/index.js",
+  "repository": "github:jeanbeanie/mern_starter_app",
   "scripts": {
     "flow": "node_modules/.bin/flow .",
     "build:server": "NODE_ENV='production' webpack --config webpack.config.server.js",
