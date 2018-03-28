@@ -5,7 +5,7 @@ import HomeContainer from './components/HomeContainer';
 import NotFound from './components/NotFound';
 import { metaData } from './config';
 
-const loadInitialData = (props:? {}) =>
+const loadInitialData = (props?: {}) =>
   // overwrite default meta data with passed in props
   ({
     ...metaData,
@@ -22,7 +22,7 @@ const routes: Array<{loadInitialData: () => {}}> = [
   },
   {
     component: NotFound,
-    loadInitialData: () => loadInitialData({ metaTitle: '404 Status' }),
+    loadInitialData: () => loadInitialData({ title: '404 Status' }),
   },
 ];
 
