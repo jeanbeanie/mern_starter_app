@@ -2,7 +2,7 @@
 /* @flow */
 
 import * as React from 'react';
-import { app } from '../config'; 
+import { app } from '../config';
 
 type Props= {
   children: React.Node,
@@ -25,6 +25,8 @@ const Html = (props: Props) => {
   const { helmet } = props;
   const data = props.initialData;
   const dataJSON = JSON.stringify(data);
+
+  // check set environmental variable to determine path to bundle file
   const rootUrl = process.env.NODE_ENV === 'production' ? app.rootUrl : app.devRootUrl;
 
   return (

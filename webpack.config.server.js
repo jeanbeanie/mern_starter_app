@@ -18,15 +18,6 @@ module.exports = {
       exclude: /node_modules/,
     }],
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        BUILD_TARGET: JSON.stringify('server'),
-      },
-    }),
-  ],
   output: {
     path: path.join(__dirname, 'server'),
     filename: 'app.js',
