@@ -2,7 +2,7 @@
 /* @flow */
 
 import HomeContainer from './components/HomeContainer';
-import NotFound from './components/NotFound';
+import PageContainer from './components/pages/PageContainer';
 import { metaData } from './config';
 
 const loadInitialData = (props?: {}) =>
@@ -21,8 +21,11 @@ const routes: Array<{loadInitialData: () => {}}> = [
     loadInitialData: () => loadInitialData(),
   },
   {
-    component: NotFound,
-    loadInitialData: () => loadInitialData({ title: '404 Status' }),
+    component: PageContainer,
+    loadInitialData: () => loadInitialData({
+      title: '404 Status',
+      children: 'NotFound',
+    }),
   },
 ];
 
